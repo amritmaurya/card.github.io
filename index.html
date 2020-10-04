@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+</head>
+<style>
+    body{
+
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: rgb(24, 23, 23);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: consolas;
+    }
+    .container{
+        width: 1000px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    .container .cards{
+        position: relative;
+    }
+    .container .cards .box{
+        width: 300px;
+        height: 200px;
+        transition: .5s;
+        
+    }
+    .container .cards .box.box1{
+        position: relative;
+        background: rgb(24, 23, 23);;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(100px);
+    }
+    .container .cards:hover .box.box1{
+        background: rgb(95, 177, 40);
+        transform: translateY(0px);
+    }
+    .container .cards .box.box1 .content{
+        opacity: 0.2;
+        transition: 0.5s;
+    }
+    .container .cards:hover .box.box1 .content{
+        opacity:1;
+        
+    }
+    .container .cards .box.box1 .content h3{
+        margin: 10px 0 0;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .container .cards .box.box2{
+        margin-top: 0;
+        position: relative;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px;
+        box-sizing: border-box;
+        box-shadow: 0 20px 50px rgba(0,0,0,.8);
+        transform: translateY(-100px);
+    }
+    .container .cards:hover .box.box2{
+        transform: translateY(0px);
+    }
+    .container .cards .content img{
+        position: relative;
+        top: 8px;
+        left: 0;
+        height: 100px;
+        width: 100px;
+        filter: invert(100%);
+    }
+    .container .cards .box.box2 .content p{
+        font-size: 0.8em;
+        margin: 0;
+        padding: 0;
+    }
+    .container .cards .box.box2 .content a{
+        margin: 15px 0 0;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 900;
+        color: #333;
+        padding: 6px;
+        border: 1px solid rgb(95, 177, 40);
+        border-radius: 5px;
+        transition: .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .cards .box.box2 .content a:hover{
+        background-color: rgb(95, 177, 40);
+        color: #fff;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="cards">
+            <div class="box box1">
+                <div class="content">
+                    <img src="htm.png" alt="">
+                    <h3>HTML</h3>
+                </div>
+            </div>
+            <div class="box box2">
+                <div class="content">
+                    <p>First developed by Tim Berners-Lee in 1990, HTML is short for Hypertext Markup Language. HTML is used to create electronic documents (called pages) that are displayed on the World Wide Web. Each page contains a series of connections to other pages called hyperlinks</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="box box1">
+                <div class="content">
+                    <img src="css.png" alt="">
+                    <h3>CSS</h3>
+                </div>
+            </div>
+            <div class="box box2">
+                <div class="content">
+                    <p>
+                        Featured snippet from the web
+                        Stands for "Cascading Style Sheet." Cascading style sheets are used to format the layout of Web pages. They can be used to define text styles, table sizes, and other aspects of Web pages that previously could only be defined in a page's HTML.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="box box1">
+                <div class="content">
+                    <img src="js.png" alt="">
+                    <h3>JAVASCRIPT</h3>
+                </div>
+            </div>
+            <div class="box box2">
+                <div class="content">
+                    <p>JavaScript is a programming language commonly used in web development. It was originally developed by Netscape as a means to add dynamic and interactive elements to websites. ... Like server-side scripting languages, such as PHP and ASP, JavaScript code can be inserted anywhere within the HTML of a webpage.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
